@@ -24,7 +24,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://samar.dexignzone.com/xhtml/vendor/swiper/css/swiper.min.css"
     />
     <link
       rel="stylesheet"
@@ -432,6 +432,7 @@
           </p>
           <span><i class="fa fa-check"> </i> Master's degree in designing</span>
           <span><i class="fa fa-check"></i> Outstanding mobile design</span>
+          <button class="gradient">get started</button>
         </div>
         <div class="start__img">
           <img src="./image/pic3.png" alt="" />
@@ -863,7 +864,7 @@
         <div class="talking__content">
           <h2 class="main__title">Testimonial</h2>
           <h3 class="main__sub">What Our Clients Say’s</h3>
-          <div thumbsSlider="" class="swiper mySwiper">
+          <div class="swiper-container mySwiper">
             <div class="swiper-wrapper talking__avatar">
               <div class="swiper-slide talking__avatar-item">
                 <div class="talking__avatar-img">
@@ -894,7 +895,7 @@
               </div>
             </div>
           </div>
-          <div class="talking__slide">
+          <div class="swiper-container talking__slide">
             <div class="swiper-wrapper">
               <div class="talking__item swiper-slide">
                 <div class="talking__wrap">
@@ -1305,7 +1306,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/plugins/fullscreen/lg-fullscreen.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/plugins/autoplay/lg-autoplay.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.1.3/plugins/share/lg-share.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://samar.dexignzone.com/xhtml/vendor/swiper/js/swiper.min.js"></script>
     <script src="./js/jquery.countup.js"></script>
     <script src="./back-to-top-master/assets/js/util.js"></script>
     <script src="./back-to-top-master/assets/js/main.js"></script>
@@ -1313,17 +1314,21 @@
     <script type="text/javascript">
       var swiper = new Swiper(".mySwiper", {
         spaceBetween: 10,
+        slidesPerView: 3,
         centeredSlides: true,
         freeMode: true,
+        autoplay: true,
+        loop: true,
+        speed: 3000,
       });
       var swiper2 = new Swiper(".talking__slide", {
-        loop: true,
+        spaceBetween: 10,
         autoplay: true,
+        loop: true,
+        speed: 3000,
         thumbs: {
           swiper: swiper,
         },
-        spaceBetween: 10,
-        speed: 2000,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

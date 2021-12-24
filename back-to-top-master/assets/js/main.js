@@ -26,7 +26,6 @@
 		var windowTop = window.scrollY || document.documentElement.scrollTop;
 		( windowTop > offset ) ? Util.addClass(backTop, 'cd-top--is-visible') : Util.removeClass(backTop, 'cd-top--is-visible cd-top--fade-out');
 		( windowTop > offsetOpacity ) && Util.addClass(backTop, 'cd-top--fade-out');
-		console.log(windowTop);
 		scrolling = false;
 	}
 })();

@@ -495,6 +495,21 @@ header.isScroll {
   width: 60%;
 }
 
+.start__infor button {
+  padding: 20px 35px;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 30px;
+  font-size: 0.96rem;
+  margin-top: 30px;
+  cursor: pointer;
+  visibility: hidden;
+  animation: moveUpStart 1s 2.5s;
+  animation-fill-mode: forwards;
+}
+
 .start__infor h1 {
   color: black;
   font-size: 70px;
@@ -1166,6 +1181,10 @@ header.isScroll {
 
 /* Begin talking */
 
+.swiper-pagination-bullet {
+  margin: 0 5px;
+}
+
 .talking {
   padding: 80px 0;
   background-image: url(../image/bg17.png);
@@ -1179,6 +1198,7 @@ header.isScroll {
 
 .talking__slide {
   margin-top: 20px;
+  overflow: hidden;
 }
 
 .talking__item {
@@ -1234,8 +1254,16 @@ header.isScroll {
   left: 30px;
 }
 
+.swiper {
+  width: 300px;
+}
+
 .mySwiper {
-  margin-top: 20px;
+  width: 300px;
+  margin: auto;
+  box-sizing: border-box;
+  height: 170px;
+  position: relative;
 }
 
 .talking__avatar {
@@ -1245,16 +1273,23 @@ header.isScroll {
   position: relative;
 }
 
-.talking__avatar::after {
+.swiper-pagination {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mySwiper::after {
   content: "";
   width: 50px;
   height: 100%;
   position: absolute;
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   left: 0;
+  z-index: 2;
+  bottom: 0;
 }
 
-.talking__avatar::before {
+.mySwiper::before {
   content: "";
   width: 50px;
   height: 100%;
@@ -1262,6 +1297,7 @@ header.isScroll {
   background: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 100%);
   right: 0;
   z-index: 2;
+  bottom: 0;
 }
 
 .talking__avatar-item {
@@ -1272,9 +1308,9 @@ header.isScroll {
   margin: 0 0 0 0 !important;
 }
 
-.talking__avatar-item:nth-child(2) {
+/* .talking__avatar-item:nth-child(2) {
   margin: 0 10px !important;
-}
+} */
 
 .talking__avatar-img {
   transform: translateY(40px);
