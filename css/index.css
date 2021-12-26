@@ -1531,6 +1531,51 @@ header.isScroll {
 
 .consor__item {
   width: calc(100% / 6);
+  height: 100px;
+  padding: 20px 30px;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.consor-item-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: var(--gradient);
+  opacity: 0;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+.consor__item-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consor__item-wrap img:last-child {
+  display: none;
+}
+
+.consor__item:hover .consor-item-layer {
+  opacity: 1;
+}
+
+.consor__item:hover .consor__item-wrap img:first-child {
+  display: none;
+}
+
+.consor__item:hover .consor__item-wrap img:last-child {
+  display: block;
 }
 
 .consor__item > img {
