@@ -4,7 +4,6 @@
 
   $.fn.countUp = function( options ) {
 
-    // Defaults
     var settings = $.extend({
         'time': 2000,
         'delay': 10
